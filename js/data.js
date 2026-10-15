@@ -10,10 +10,10 @@ const SITE = {
     initials: "IP",
     status: "Élève au lycée Simone de Beauvoir",
     domain: "Formation CIEL · informatique · réseaux · électronique",
-    tagline: "Le numérique me passionne et je m’y intéresse aussi chez moi à travers des projets personnels. En première CIEL, j’approfondis mes connaissances en informatique, réseaux, cybersécurité et électronique.",
+    tagline: "En première CIEL, j’explore la cybersécurité, l’informatique, les réseaux et l’électronique — et je mets tout cela en pratique chez moi à travers des projets personnels : bots Telegram, outils en ligne de commande et automatisation en Python.",
     location: "Toulouse, France",
     email: "ibrahimpoulain5@gmail.com",
-    available: "En apprentissage"
+    available: "En formation"
   },
 
   links: {
@@ -25,13 +25,13 @@ const SITE = {
 
   about: {
     intro: [
-      "Je suis élève au lycée Simone de Beauvoir, à Gragnague, en première CIEL (Cybersécurité, Informatique et réseaux, Électronique), après une seconde MTNE. Le numérique me passionne et je m’y intéresse aussi chez moi à travers des projets personnels.",
-      "J’ai également effectué un stage chez ACTIA AUTOMOTIVE, une expérience très enrichissante et agréable. Je souhaite continuer à développer mes compétences et à présenter ici mes réalisations."
+      "Élève au lycée Simone de Beauvoir, à Gragnague, je suis en première CIEL (Cybersécurité, Informatique et réseaux, Électronique) après une seconde MTNE. Cette formation me donne des bases solides en programmation, en réseaux et en sécurité, que je prolonge chez moi à travers des projets personnels.",
+      "J’ai effectué un stage chez ACTIA AUTOMOTIVE, une expérience très enrichissante et agréable qui m’a fait découvrir le monde professionnel. Curieux de nature, j’aime apprendre en réalisant : je développe des bots Telegram, des outils en Python et des automatisations qui me permettent de transformer les notions vues en cours en réalisations concrètes."
     ],
     facts: [
       { label: "Âge", value: "16 ans" },
-      { label: "Statut", value: "Lycéen" },
-      { label: "Formation", value: "CIEL" },
+      { label: "Niveau", value: "Première CIEL" },
+      { label: "Parcours", value: "Seconde MTNE → CIEL" },
       { label: "Localisation", value: "Toulouse, France" }
     ],
     goals: [
@@ -59,25 +59,54 @@ const SITE = {
   },
 
   skills: [
-    { category: "Informatique", icon: "code", items: ["Découverte des bases", "En cours d’apprentissage"] },
-    { category: "Réseaux", icon: "network", items: ["Premières notions en cours"] },
-    { category: "Cybersécurité", icon: "shield", items: ["Sensibilisation et bonnes pratiques"] },
-    { category: "Électronique", icon: "cpu", items: ["Découverte dans le cadre de la formation"] },
-    { category: "Outils", icon: "tool", items: ["Outils utilisés en cours"] }
+    {
+      category: "Programmation",
+      icon: "python",
+      items: ["Python (scripts et outils)", "Bots Telegram (Bot API)", "Bots Discord", "Ligne de commande (CLI)", "Automatisation de tâches"]
+    },
+    {
+      category: "Informatique",
+      icon: "code",
+      items: ["Bases de la programmation", "Notions de HTML et CSS", "Bureautique", "Gestion de fichiers", "Lecture et débogage de code"]
+    },
+    {
+      category: "Réseaux",
+      icon: "network",
+      items: ["Notions d’adressage IP", "Architecture des réseaux", "Notions de TCP/IP", "Découverte en cours"]
+    },
+    {
+      category: "Cybersécurité",
+      icon: "shield",
+      items: ["Hygiène informatique (ANSSI)", "Mots de passe robustes", "Sensibilisation aux menaces", "Premières notions d’OSINT"]
+    },
+    {
+      category: "Électronique",
+      icon: "cpu",
+      items: ["Composants électroniques", "Notions de mesure", "Lecture de schémas", "Découverte en formation"]
+    }
   ],
 
   projects: [
     {
       name: "Bot Telegram Multitool",
-      description: "Bot Telegram réunissant des outils OSINT, des outils pour Discord et la création de fiches d’identité.",
+      description: "Un assistant Telegram qui regroupe mes outils au même endroit : recherches OSINT, utilitaires pour Discord et génération de fiches d’identité, le tout depuis une conversation.",
       image: "assets/project-multitool.svg",
-      tech: ["Telegram", "OSINT", "Outils Discord", "Fiche d’identité"]
+      status: "Projet personnel",
+      tech: ["Python", "Telegram Bot API", "OSINT", "Outils Discord", "Fiche d’identité"]
+    },
+    {
+      name: "Multitool Python en CLI",
+      description: "La version ligne de commande du Multitool : mêmes fonctionnalités (OSINT, outils Discord, fiches d’identité) mais utilisable directement dans un terminal, sans dépendre de Telegram.",
+      image: "assets/project-python-cli.svg",
+      status: "Projet personnel",
+      tech: ["Python", "CLI", "OSINT", "Outils Discord", "Fiche d’identité"]
     },
     {
       name: "Bot Telegram islamique",
-      description: "Bot dédié à la pratique quotidienne : consultation des horaires de prière, lecture ou écoute du Coran et notifications à l’heure de la prière.",
+      description: "Un compagnon du quotidien : horaires de prière, lecture ou écoute du Coran et notifications à l’heure de la prière, envoyées automatiquement par le bot.",
       image: "assets/project-prayer-bot.svg",
-      tech: ["Telegram", "Horaires de prière", "Coran", "Notifications"]
+      status: "Projet personnel",
+      tech: ["Python", "Telegram", "Horaires de prière", "Coran", "Notifications"]
     }
   ],
 
@@ -87,35 +116,43 @@ const SITE = {
       type: "Scolarité",
       title: "Collège Simone Veil",
       place: "Parcours scolaire",
-      description: "Scolarité au collège."
+      description: "Scolarité au collège, où sont nées mes premières curiosités pour l’informatique et les nouvelles technologies."
     },
     {
-      date: "Actuellement",
+      date: "Seconde",
       type: "Formation",
-      title: "Lycée Simone de Beauvoir",
-      place: "Gragnague",
-      description: "Après une seconde MTNE, je suis actuellement en première CIEL."
+      title: "Seconde MTNE",
+      place: "Parcours MTNE",
+      description: "Découverte de la maintenance, des réseaux et de l’électronique : un parcours technologique qui m’a orienté vers la formation CIEL."
     },
     {
       date: "Stage",
       type: "Expérience",
       title: "Stage chez ACTIA AUTOMOTIVE",
       place: "ACTIA AUTOMOTIVE",
-      description: "Une expérience très enrichissante et agréable."
+      description: "Une première immersion en entreprise, très enrichissante et agréable : observation du fonctionnement d’une entreprise et découverte du travail en équipe."
+    },
+    {
+      date: "Actuellement",
+      type: "Formation",
+      title: "Première CIEL",
+      place: "Lycée Simone de Beauvoir, Gragnague",
+      description: "Cybersécurité, Informatique et réseaux, Électronique : j’y consolide mes bases théoriques, que je complète par des projets personnels."
     }
   ],
 
   cv: {
     file: "assets/cv.pdf",
     education: [
-      { period: "Actuellement", title: "Première CIEL (après une seconde MTNE)", place: "Lycée Simone de Beauvoir, Gragnague" }
+      { period: "Actuellement", title: "Première CIEL — Cybersécurité, Informatique et réseaux, Électronique", place: "Lycée Simone de Beauvoir, Gragnague" },
+      { period: "Seconde", title: "Seconde MTNE", place: "Parcours technologique" }
     ],
     experience: [
       {
         period: "Stage",
-        title: "Stage",
+        title: "Stage en entreprise",
         place: "ACTIA AUTOMOTIVE",
-        detail: "Une expérience très enrichissante et agréable."
+        detail: "Une expérience très enrichissante et agréable : découverte du fonctionnement d’une entreprise, du travail en équipe et du rythme de la vie professionnelle."
       }
     ],
     languages: [
@@ -124,17 +161,18 @@ const SITE = {
     ],
     certifications: [],
     interests: [
-      "Informatique",
-      "Réseaux",
-      "Cybersécurité",
-      "Électronique",
       "Programmation Python",
-      "Bots Telegram et Discord"
+      "Bots Telegram et Discord",
+      "Cybersécurité",
+      "Réseaux",
+      "Électronique",
+      "Création de projets personnels",
+      "Veille informatique"
     ]
   },
 
   contact: {
-    message: "Pour me contacter, vous pouvez m’écrire par email. Le formulaire ouvre votre application de messagerie.",
+    message: "Une question sur ma formation, mes projets ou un échange autour du numérique ? Écris-moi, je réponds volontiers.",
     formEndpoint: ""
   }
 };

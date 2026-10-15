@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio d’Ibrahim, lycéen de 16 ans qui découvre la formation CIEL : cybersécurité, informatique, réseaux et électronique.">
+  <meta name="description" content="Portfolio d’Ibrahim Poulain, lycéen de 16 ans en première CIEL : cybersécurité, informatique, réseaux et électronique. Projets personnels en Python, bots Telegram et parcours scolaire.">
   <meta name="theme-color" content="#000000">
-  <title>Portfolio — Lycéen en formation CIEL</title>
+  <meta name="author" content="Ibrahim Poulain">
+  <meta name="robots" content="index, follow">
+  <title>Portfolio — Ibrahim Poulain</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Portfolio — Ibrahim Poulain">
+  <meta property="og:description" content="Lycéen en première CIEL : cybersécurité, informatique, réseaux et électronique. Projets personnels en Python, bots Telegram et parcours scolaire.">
+  <meta property="og:site_name" content="Portfolio — Ibrahim Poulain">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +22,42 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230b0f16'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffffff' font-family='monospace'>_</text></svg>">
+
+  <!-- Retire « no-js » avant le premier rendu : aucun contenu visible puis masqué.
+       Si main.js ne démarre pas, la classe est restaurée pour ne rien cacher. -->
+  <script>
+    document.documentElement.classList.remove('no-js');
+    window.addEventListener('load', function () {
+      if (!window.__portfolioBooted) document.documentElement.classList.add('no-js');
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ibrahim Poulain",
+    "jobTitle": "Élève en première CIEL",
+    "email": "mailto:ibrahimpoulain5@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Toulouse",
+      "addressCountry": "FR"
+    },
+    "alumniOf": "Lycée Simone de Beauvoir",
+    "knowsAbout": ["Cybersécurité", "Informatique", "Réseaux", "Électronique", "Python"]
+  }
+  </script>
 </head>
 <body>
 
-  <a class="skip-link" href="#about">Aller au contenu</a>
+  <canvas class="starfield" aria-hidden="true"></canvas>
+  <canvas class="cursor-fx" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#content">Aller au contenu</a>
+
+  <noscript>
+    <p class="noscript-note">Ce site est optimisé pour JavaScript : sans lui, seules les parties statiques (hero, CV et contact) s’affichent. Activez JavaScript pour voir l’ensemble du portfolio.</p>
+  </noscript>
 
   <!-- ===== NAVIGATION ===== -->
   <header class="nav" id="nav">
@@ -45,7 +86,7 @@
     <div class="nav__progress" id="navProgress"></div>
   </header>
 
-  <main>
+  <main id="content" tabindex="-1">
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="home">
@@ -56,7 +97,7 @@
         <div class="hero__content">
           <p class="hero__badge" data-reveal>
             <span class="pulse-dot"></span>
-            <span id="heroBadge">En apprentissage</span>
+            <span id="heroBadge">En formation</span>
           </p>
 
           <h1 class="hero__title" data-reveal data-reveal-delay="80">
@@ -70,7 +111,7 @@
             <span id="heroDomain">Formation CIEL · informatique · réseaux · électronique</span>
           </p>
 
-          <p class="hero__tagline" data-reveal data-reveal-delay="240" id="heroTagline">Le numérique me passionne et je m’y intéresse aussi chez moi à travers des projets personnels. En première CIEL, j’approfondis mes connaissances en informatique, réseaux, cybersécurité et électronique.</p>
+          <p class="hero__tagline" data-reveal data-reveal-delay="240" id="heroTagline">En première CIEL, j’explore la cybersécurité, l’informatique, les réseaux et l’électronique — et je mets tout cela en pratique chez moi à travers des projets personnels : bots Telegram, outils en ligne de commande et automatisation en Python.</p>
 
           <div class="hero__actions" data-reveal data-reveal-delay="320">
             <a href="#projects" class="btn btn--primary">
@@ -107,7 +148,7 @@
               <p><span class="t-prompt">➜</span> <span class="t-path">~</span> cat focus.txt</p>
               <p class="t-out" id="tFocus">formation ciel · informatique · réseaux · électronique</p>
               <p><span class="t-prompt">➜</span> <span class="t-path">~</span> ./looking_for.sh --stage</p>
-              <p class="t-out t-ok" id="tStatus">[ok] en apprentissage</p>
+              <p class="t-out t-ok" id="tStatus">[ok] en formation</p>
               <p><span class="t-prompt">➜</span> <span class="t-path">~</span> <span class="t-cursor"></span></p>
             </div>
           </div>
@@ -128,7 +169,7 @@
         <header class="section__head" data-reveal>
           <span class="section__index">01</span>
           <h2 class="section__title">À propos</h2>
-          <p class="section__subtitle">Qui je suis, ce que j'étudie et ce que je recherche.</p>
+          <p class="section__subtitle">Mon parcours, ma formation et ce que je veux construire dans le numérique.</p>
         </header>
 
         <div class="about">
@@ -156,12 +197,12 @@
                 <span class="stat__label">ans</span>
               </div>
               <div class="stat">
-                <span class="stat__value" data-count="1">1</span>
-                <span class="stat__label">formation CIEL</span>
+                <span class="stat__value" data-count="3">3</span>
+                <span class="stat__label">projets personnels</span>
               </div>
               <div class="stat">
                 <span class="stat__value" data-count="1">1</span>
-                <span class="stat__label">expérience professionnelle</span>
+                <span class="stat__label">stage en entreprise</span>
               </div>
             </div>
           </aside>
@@ -175,7 +216,7 @@
         <header class="section__head" data-reveal>
           <span class="section__index">02</span>
           <h2 class="section__title">Compétences</h2>
-          <p class="section__subtitle">Les domaines que je découvre et que j’apprends au lycée.</p>
+          <p class="section__subtitle">Les domaines de la formation CIEL et les outils que j’utilise dans mes projets personnels.</p>
         </header>
 
         <div class="skills" id="skillsGrid"></div>
@@ -189,7 +230,7 @@
         <header class="section__head" data-reveal>
           <span class="section__index">03</span>
           <h2 class="section__title">Projets</h2>
-          <p class="section__subtitle">Mes exercices et projets scolaires seront ajoutés au fur et à mesure.</p>
+          <p class="section__subtitle">Trois projets personnels déjà en ligne : bots Telegram, outil en ligne de commande et automatisation en Python.</p>
         </header>
 
         <div class="projects" id="projectsGrid"></div>
@@ -202,7 +243,7 @@
         <header class="section__head" data-reveal>
           <span class="section__index">04</span>
           <h2 class="section__title">Parcours</h2>
-          <p class="section__subtitle">Mon parcours scolaire, qui se construit actuellement.</p>
+          <p class="section__subtitle">De mon collège à ma première CIEL, en passant par mon premier stage en entreprise.</p>
         </header>
 
         <div class="timeline" id="timelineList"></div>
@@ -271,7 +312,7 @@
         <header class="section__head" data-reveal>
           <span class="section__index">06</span>
           <h2 class="section__title">Contact</h2>
-          <p class="section__subtitle" id="contactMessage">Une question sur ma formation ? Écrivez-moi.</p>
+          <p class="section__subtitle" id="contactMessage">Une question sur ma formation ou mes projets ? Écrivez-moi.</p>
         </header>
 
         <div class="contact">
@@ -297,6 +338,14 @@
               </span>
               <svg class="channel__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
+
+            <figure class="contact__session">
+              <img src="assets/session-qr.png" alt="QR code pour me contacter sur Session" width="768" height="768">
+              <figcaption>
+                <span class="contact__session-label">Session</span>
+                <span>Scanne ce QR code pour me retrouver sur Session.</span>
+              </figcaption>
+            </figure>
 
             <aside class="contact__note">
               <span class="contact__note-mark" aria-hidden="true">↗</span>
@@ -344,6 +393,10 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
+    <div class="footer__matrix" aria-hidden="true">
+      <canvas class="footer__matrix-canvas"></canvas>
+      <span class="footer__matrix-label">END OF LINE <span>//</span> SYSTEM IDLE</span>
+    </div>
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="nav__logo-mark" id="footerInitials">_</span>
