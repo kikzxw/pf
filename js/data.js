@@ -62,12 +62,12 @@ const SITE = {
     {
       category: "Programmation",
       icon: "python",
-      items: ["Python (scripts et outils)", "Bots Telegram (Bot API)", "Bots Discord", "Ligne de commande (CLI)", "Automatisation de tâches"]
+      items: ["Python (scripts et outils)", "Bots Telegram (Bot API)", "Bots Discord", "Ligne de commande (CLI)", "Automatisation de tâches", "Vibe coding (développement assisté par IA)"]
     },
     {
       category: "Informatique",
       icon: "code",
-      items: ["Bases de la programmation", "Notions de HTML et CSS", "Bureautique", "Gestion de fichiers", "Lecture et débogage de code"]
+      items: ["Bases de la programmation", "Notions de HTML et CSS", "Bureautique", "Gestion de fichiers", "Lecture et débogage de code", "Préparation de PC", "Installation de pilotes", "Mises à jour Windows"]
     },
     {
       category: "Réseaux",
@@ -83,6 +83,16 @@ const SITE = {
       category: "Électronique",
       icon: "cpu",
       items: ["Composants électroniques", "Notions de mesure", "Lecture de schémas", "Découverte en formation"]
+    },
+    {
+      category: "Savoir-être",
+      icon: "heart",
+      items: ["À l’écoute", "Déterminé", "Résolution de problèmes", "Esprit d’équipe", "Sérieux et ponctualité", "Autonomie", "Adaptabilité"]
+    },
+    {
+      category: "Langues",
+      icon: "globe",
+      items: ["Français (langue maternelle)", "Anglais (B1)"]
     }
   ],
 
