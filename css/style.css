@@ -107,7 +107,7 @@ ul, ol, dl { margin: 0; padding: 0; list-style: none; }
   border-radius: 8px;
   border: 2px solid var(--bg);
 }
-::-webkit-scrollbar-thumb:hover { background: #26304180; background: #263041; }
+::-webkit-scrollbar-thumb:hover { background: #263041; }
 
 /* ---------- 2. UTILITAIRES ---------- */
 .container {
@@ -832,8 +832,8 @@ ul, ol, dl { margin: 0; padding: 0; list-style: none; }
   border-radius: 12px 26px 12px 26px;
   background: linear-gradient(145deg, rgba(56,189,248,.075), rgba(255,255,255,.008) 60%), var(--surface);
 }
-.skill:nth-child(2) .skill__head { flex-direction: row-reverse; }
-.skill:nth-child(2) .skill__count { margin-left: 0; margin-right: auto; }
+.skill:nth-child(2) .skill__head { flex-direction: row; }
+.skill:nth-child(2) .skill__count { margin-left: auto; margin-right: 0; }
 
 /* Effet de suivi du pointeur (surbrillance fine) */
 .skill::before {
