@@ -809,12 +809,11 @@ ul, ol, dl { margin: 0; padding: 0; list-style: none; }
 /* Compétences ---------- */
 .skills {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .skill {
-  grid-column: span 2;
   position: relative;
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
@@ -826,8 +825,8 @@ ul, ol, dl { margin: 0; padding: 0; list-style: none; }
     border-color .4s var(--ease),
     box-shadow .45s var(--ease-out);
 }
-.skill:nth-child(1),
-.skill:nth-child(2) { grid-column: span 3; }
+
+/* Mise en avant des deux premières catégories */
 .skill:nth-child(1) { border-left: 2px solid rgba(94,234,212,.48); }
 .skill:nth-child(2) {
   border-radius: 12px 26px 12px 26px;
@@ -835,7 +834,36 @@ ul, ol, dl { margin: 0; padding: 0; list-style: none; }
 }
 .skill:nth-child(2) .skill__head { flex-direction: row-reverse; }
 .skill:nth-child(2) .skill__count { margin-left: 0; margin-right: auto; }
-.skill:nth-child(4) { border-radius: 26px 12px 26px 12px; }
+
+/* Effet de suivi du pointeur (surbrillance fine) */
+.skill::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), rgba(94,234,212,.13), transparent 62%);
+  opacity: 0;
+  transition: opacity .4s var(--ease);
+  pointer-events: none;
+}
+.skill::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s var(--ease-out);
+}
+.skill:hover {
+  transform: translateY(-5px);
+  border-color: rgba(94,234,212,.3);
+  box-shadow: 0 26px 54px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(94,234,212,.06);
+}
+.skill:hover::before { opacity: 1; }
+.skill:hover::after  { transform: scaleX(1); }
 /* Effet de suivi du pointeur (surbrillance fine) */
 .skill::before {
   content: "";
