@@ -7,7 +7,7 @@ const SITE = {
   profile: {
     firstName: "Ibrahim",
     lastName: "POULAIN",
-    initials: "IP",
+    initials: ">_",
     status: "Élève au lycée Simone de Beauvoir",
     domain: "Formation CIEL · informatique · réseaux · électronique",
     tagline: "En première CIEL, j’explore la cybersécurité, l’informatique, les réseaux et l’électronique — et je mets tout cela en pratique chez moi à travers des projets personnels : bots Telegram, outils en ligne de commande et automatisation en Python.",
